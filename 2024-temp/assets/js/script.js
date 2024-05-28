@@ -3,7 +3,7 @@ var 본선Password = "gogo2024";
 
 //////////////// 공통 자료 ///////////////
 function 대회일정표() {
-    window.open("/2024/assets/img/대회일정표.svg", "_blank");
+    window.open("../assets/img/대회일정표.svg", "_blank");
 }
 
 function 참가자접수() {
@@ -11,7 +11,7 @@ function 참가자접수() {
 } 
 
 function 계정사용량() {
-    window.open("/2024/no-page.html", "_blank");
+    window.open("../../no-page.html", "_blank");
 }
 
 //////////////// 예선 관련 자료 //////////
@@ -20,7 +20,7 @@ function 예선오픈채팅() {
 }
 
 function 예선OT() {
-        window.open("/2024/no-page.html", "_blank");
+        window.open("../../no-page.html", "_blank");
 }
 
 function 예선OT자료() {
@@ -42,7 +42,7 @@ function 예선규칙() {
 }
 
 function 예선랭킹() {
-    window.open("/2024/no-page.html", "_blank");
+    window.open("../../no-page.html", "_blank");
 }
 
 
@@ -53,7 +53,7 @@ function 본선오픈채팅() {
 
 
 function 본선OT() {
-        window.open("/2024/no-page.html", "_blank");
+        window.open("../../no-page.html", "_blank");
 }
 
 function 본선OT자료() {
@@ -76,11 +76,11 @@ function 본선규칙() {
 } 
 
 function 본선랭킹() {
-    window.open("/2024/no-page.html", "_blank");
+    window.open("../../no-page.html", "_blank");
 }
 
 function 본선테스트주행시간표() {
-    window.open("/2024/assets/img/본선테스트주행시간표.jpg", "_blank");
+    window.open("../assets/img/본선테스트주행시간표.jpg", "_blank");
 }
 
 function 본선숙소위치() {
@@ -88,11 +88,11 @@ function 본선숙소위치() {
 }
 
 function 본선시간표() {
-    window.open("/2024/assets/img/본선시간표.jpg", "_blank");
+    window.open("../assets/img/본선시간표.jpg", "_blank");
 }
 
 function 본선라이브스트리밍() {
-    window.open("/2024/no-page.html", "_blank");
+    window.open("../../no-page.html", "_blank");
 }
 
 
