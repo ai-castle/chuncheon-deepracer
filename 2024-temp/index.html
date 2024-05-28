@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>2024 춘천 AWS 딥레이서 챔피언십</title>
+  <meta content="2024년 춘천 AWS 딥레이서 챔피언십 대회 공식 홈페이지입니다" name="description">
+  <meta content="딥레이서, DeepRacer, AWS, 춘천시, 춘천, AI, 인공 지능" name="keywords">
+  <meta property="og:title" content="2024 춘천 AWS 딥레이서 챔피언십">
+  <meta property="og:site_name" content="2024 춘천 AWS 딥레이서 챔피언십">
+  <meta property="og:description" content="본 홈페이지는 춘천시에서 개최하는 2024년 AWS DeepRacer 자율주행 인공지능 경진대회 홈페이지입니다.">
+  <meta property="og:image" content="assets/img/hero-bg.jpg">
+  <meta property="og:url" content="https://chuncheon-deepracer.ai-castle.com/2024">
+
+  <!-- Favicons -->
+  <link href="favicon.png" rel="icon" type="image/png">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+ 
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 비율 (9 / 16 = 0.5625) */
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none; /* frameborder="0"과 동일한 효과 */
+    }
+  </style>
+
+  <!-- ======= 버전 컨트롤 (캐싱 무효화) ======= -->
+  <script src="assets/js/script.js?v=0.0.1"></script> 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var version = '?v=0.0.1'; 
+        var elements = document.querySelectorAll('[data-version="control"]');
+        elements.forEach(function(el) {
+            if (el.tagName === 'IMG' && el.src) {
+                el.src += version;
+            } else if (el.tagName === 'A' && el.href) {
+                el.href += version;
+            }
+        });
+    });
+  </script>
+</head>
+
+<body>
+ 
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center"> 
+    <div class="container">
+      <div class="header-container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <h1 class="text-light"><a href="/"><span>League 24</span></a></h1> 
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav id="navbar" class="navbar"> 
+          <ul> 
+            <li><a class="nav-link scrollto active" href="./#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="./#about">About</a></li>
+            <!-- <li><a class="nav-link scrollto" href="./#orientation">Orientation</a></li> -->
+            <li><a class="nav-link scrollto" href="./#notice">Notice</a></li>
+            <li><a class="nav-link scrollto" href="./#team">Team</a></li>
+            <li><a class="nav-link scrollto" href="./#ranking">Ranking</a></li> 
+            <!-- <li><a class="nav-link scrollto" href="./#contact">Contact</a></li> -->
+            <li><a class="nav-link scrollto " href="./#gallery">Gallery</a></li>
+
+            <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a onclick="대회일정표()" href="javascript:void(0);">대회 일정표</a></li> 
+                <li><a onclick="참가자접수()" href="javascript:void(0);">참가자접수</a></li> 
+                <li class="dropdown"><a><span>예선 관련 자료</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a onclick="예선오픈채팅()" href="javascript:void(0);">예선 오픈채팅</a></li> 
+                    <li><a onclick="예선OT()" href="javascript:void(0);">예선 OT (Zoom)</a></li> 
+                    <li><a onclick="예선OT자료()" href="javascript:void(0);">예선 OT 자료</a></li> 
+                    <li><a onclick="예선규칙()" href="javascript:void(0);">예선 규칙</a></li> 
+                    <li><a onclick="예선랭킹()" href="javascript:void(0);">예선 랭킹</a></li> 
+                  </ul>
+                </li>
+                <li class="dropdown"><a><span>본선 관련 자료</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a onclick="본선오픈채팅()" href="javascript:void(0);">본선 오픈채팅</a></li> 
+                    <li><a onclick="본선OT()" href="javascript:void(0);">본선 OT (Zoom)</a></li> 
+                    <li><a onclick="본선OT자료()" href="javascript:void(0);">본선 OT 자료</a></li> 
+                    <li><a onclick="본선규칙()" href="javascript:void(0);">본선 규칙</a></li> 
+                    <li><a onclick="본선랭킹()" href="javascript:void(0);">본선 랭킹</a></li> 
+                    <li><a onclick="본선테스트주행시간표()" href="javascript:void(0);">본선 테스트 주행 시간표</a></li> 
+                    <li><a onclick="본선숙소위치()" href="javascript:void(0);">본선 숙소 위치</a></li> 
+                    <li><a onclick="본선시간표()" href="javascript:void(0);">본선 시간표</a></li> 
+                    <li><a onclick="본선라이브스트리밍()" href="javascript:void(0);">본선 라이브 스트리밍</a></li> 
+                  </ul>
+                </li>
+                <li><a onclick="계정사용량()" href="javascript:void(0);">계정사용량 확인</a></li> 
+                <li><a target="_blank" href="https://deepracer-school-ko.ai-castle.com/">AWS DeepRacer School</a></li>
+              </ul> 
+            </li> 
+            <li><a onclick="참가자접수()" href="javascript:void(0);" class="getstarted scrollto"><b>참가자 접수</b></a></li> 
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+      </div><!-- End Header Container -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>
+        <div style="margin-bottom:10px; color:#effaf4;">2024 춘천</div> 
+        <div style="color:#effaf4;">AWS 딥레이서 챔피언십</div> 
+      </h1>
+      <h2 style="font-size:larger;">자율주행 AI 융합경진대회</h2>
+      
+      <!-- 참가자 접수 기간 -->
+      <a onclick="참가자접수()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🚀 참가자 접수 > </b></a> 
+      <h2 style="font-size:large;"><b>2024/8/11 (일), 12:00 까지</b></h2>
+
+      <!-- 예선 기간 -->
+      <!-- <a onclick="예선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 예선 실시간 랭킹 </b></a>  -->
+      <!-- <a onclick="계정사용량()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🕑 계정 실시간 사용량 </b></a>  -->
+      <!-- <h2 style="font-size:large;"><b>예선 기간 중 : 8월 17일 - 8월 31일</b></h2> -->
+
+      <!-- 본선 기간 -->
+      <!-- <a onclick="본선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏆️ 본선 실시간 랭킹 </b></a>  -->
+      <!-- <a onclick="본선라이브스트리밍()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>📺 본선 라이브 스트리밍 </b></a><br>  -->
+      <!-- <a onclick="예선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 예선 최종 랭킹 </b></a>  -->
+      <!-- <a onclick="계정사용량()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🕑 계정 실시간 사용량 </b></a>  -->
+      <!-- <h2 style="font-size:large;"><b>본선 기간 중 : 9월 21일 - 9월 29일</b></h2> -->
+
+      <!-- 대회 종료 --> 
+      <!-- <a onclick="예선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 예선 최종 랭킹 </b></a>  -->
+      <!-- <a onclick="본선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏆️ 본선 최종 랭킹 </b></a> -->
+      <!-- <h2 style="font-size:large;"><b>대회가 모두 종료되었습니다.</b></h2> -->
+
+    </div> 
+  </section><!-- End Hero --> 
+
+  <main id="main">
+
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="100"
+            style="justify-content: center;">
+            <a target="_blank" href="https://www.chuncheon.go.kr/">
+            <img src="assets/img/clients/chuncheon-logo-rmbg2.png" class="img-fluid" alt="춘천시">
+          </a>
+          </div>
+ 
+          <div class="col-lg-3 col-md-6 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="200"
+            style="justify-content: center;">
+            <a target="_blank" href="https://www.gica.or.kr/"> 
+            <img src="assets/img/clients/gica-logo-rmbg-sm.png" class="img-fluid" alt="gica">
+          </a> 
+          </div>  
+ 
+          <div class="col-lg-3 col-md-6 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="300"
+            style="justify-content: center;">
+            <a target="_blank" href="https://aws.com/">
+              <img src="assets/img/clients/aws-logo-1.png" class="img-fluid" alt="AWS">
+            </a> 
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="300"
+            style="justify-content: center;">
+            <a target="_blank" href="https://aicastle.io/">
+              <img src="assets/img/clients/aicastle-logo-rmbg.png" class="img-fluid" alt="(주) 에이아이캐슬">
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Clients Section -->
+
+    <!-- ======= 대회 최종 결과 영상  ======= -->
+    <!-- <section id="video" class="team">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="section-title" data-aos="fade-right">
+              <h2>Video</h2>
+              <p>대회 관련 영상입니다</p> 
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="row">
+
+              <div class="col-lg-12">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Zc-2HHBj2mk?si=HeaOIEUXuJpxWIYC" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                  <div class="member-info">
+                    <h4>대회 스케치 영상</h4> 
+                  </div> 
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/e-gRLzkfbtk?si=BtRatcyFfX2ADDKH" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                  <div class="member-info">
+                    <h4>홍보 영상</h4>
+                  </div> 
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/24xmItaWrUs?si=fgUQK8Ds3aQbI-7b" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                  <div class="member-info">
+                    <h4>라이브 스트리밍</h4>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Team Section -->
+
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+            <h2>대회 안내</h2>
+            <p>본 대회는 춘천시에서 주최하는 AWS DeepRacer를 활용한 인공지능 강화학습 기반의 자율주행 자동차 AI 융합경진대회입니다.</p>
+            <a href="assets/img/poster.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="포스터" data-version="control">
+              <img src="assets/img/poster-thumb.jpg" class="img-fluid col-lg-10 col-md-10" alt="" data-version="control">
+            </a>
+          </div>
+          <div class="col-lg-7 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200" style="margin-top:20px;">
+            <p> 
+
+            </p>
+            <ul>
+              <li>
+                <i class="ri-check-double-line"></i> 참가 대상 <br/> &nbsp;
+                - 인공지능 / 자율주행에 관심있는 전국 대학생 및 성인<br/> &nbsp;
+                - 팀별 신청 (2~4명) <br/> &nbsp;
+                - 파이썬 및 딥레이서 유경험자 우대
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> 참가 신청 <br/> &nbsp;
+                - 접수 기간 : 2024년 7월 10일 (수) ~ 8월 11일(일), 12:00 까지<br/> &nbsp;
+                - 접수 방법 : 온라인 접수 (bit.ly/ai-chuncheon)<br/> &nbsp;
+                - 모집 규모 : 30개팀 내외
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> 경기 방식 <br/> &nbsp;
+                - 예선 : 30개팀 / 온라인 대회<br/> &nbsp;
+                - 본선 : 6개팀 / 오프라인 대회 (춘천시 커먼즈필드)
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> 지원 <br/> &nbsp;
+                - DeepRacer 계정 사용료 : 예선 (40시간), 본선 (40시간) <br/> &nbsp;
+                - DeepRacer 교육 : 예선 및 본선 각 4시간 <br/> &nbsp;
+                - 딥레이서 차량 대여 (본선)
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> 시상 및 상품 <br/>
+                - 대상 (1팀) : 250만원 / 춘천시장상 / AWS 리인벤트 참관지원 예정<br/> &nbsp;
+                <span style="font-size:80%;">* AWS 리인벤트 참관지원(2~3명)은 내부사정 및 현지상황에 따라 변경 또는 취소될 수 있음</span> <br/>
+                - 최우수상 (1팀) : 200만원 / 춘천시장상<br/>
+                - 우수상 (2팀) : 100만원 / 강원정보문화산업진흥원장상<br/> 
+                - 장려상 (2팀) : 50만원 / 강원정보문화산업진흥원장상<br/>
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> 주최 및 주관 <br/> &nbsp;
+                - 주최 : 춘천시<br/> &nbsp;
+                - 주관 : 강원정보문화산업진흥원 <br/> &nbsp;
+                - 후원 : AWS (Amazon Web Services) <br/> &nbsp;
+              </li>
+              <li>
+
+              </li>
+            </ul>
+
+
+          </div> 
+
+          <div class="" data-aos="fade-right" data-aos-delay="300" style="margin-top:10px;">
+            <i style="color:#2385F4;"class="ri-check-double-line"></i> 대회 일정표 <br/>
+            <a href="assets/img/대회일정표.svg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+              title="대회 일정표" data-version="control">
+              <img src="assets/img/대회일정표.svg" class="img-fluid col-lg-10 col-md-10" alt="" data-version="control">
+            </a>
+          </div>
+
+        </div>
+  
+
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-6 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>예선 참가팀 수</p>
+          </div>
+
+          <div class="col-lg-6 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>본선 참가팀 수</p>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+
+    <!-- ======= orientation Section ======= -->
+    
+    <section id="orientation" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-right">
+            <div class="content">
+              <h4 style="margin:20px auto;"><b>ORIENTATION</b></h4>
+              <h5 style="margin:20px auto;"><b>OT (필참)</b></h5>
+              <p> 예선 및 본선 참가자들은 '오리엔테이션'(온라인, Zoom)에 필수로 참가해야 합니다. 대회 규칙, AWS 계정 배포 및 사용 방법등을 안내합니다.</p>
+
+              <h5 style="margin:20px auto;"><b>특강 (선택)</b></h5>
+              <p>오리엔테이션이 끝나고 진행되는 '딥레이서 특강' 참석은 선택 사항입니다. 딥레이서를 처음 접하는 참가자들을 위한 교육입니다.</p>
+            </div>
+          </div>
+          <div class="col-lg-9 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>예선 OT - 온라인</h4> 
+                    <a href="javascript:void(0);" onclick="예선OT()" class="btn btn-success" style="margin:10px auto;">
+                      예선 OT 참여 >
+                    </a>
+                    <p><b>Zoom (8/17 토, 13:00 - 14:00)</b></p>
+                    <a href="assets/img/예선OT시간표.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                      title="예선 OT 시간표" data-version="control">
+                      <img src="assets/img/예선OT시간표.jpg" class="img-fluid col-lg-10 col-md-10" alt="" data-version="control">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-xl-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>본선 OT - 온라인 </h4>
+                    <a href="javascript:void(0);" onclick="본선OT()" class="btn btn-success" style="margin:10px auto;">
+                      본선 OT 참여 >
+                    </a>
+                    <p><b>Zoom (9/21 토, 13:00 - 14:00)</b></p>
+                    <a href="assets/img/본선OT시간표.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                      title="본선 OT 시간표" data-version="control">
+                      <img src="assets/img/본선OT시간표.jpg" class="img-fluid col-lg-10 col-md-10" alt="" data-version="control">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= notice Section ======= -->
+    <section id="notice" class="services section-bg">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="section-title" data-aos="fade-right">
+              <h2>Notice</h2>
+
+            </div>
+          </div>
+          <div class="col-lg-12"> 
+            <div class="row">
+              <div class="col-md-4 d-flex align-items-stretch mt-4">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="width: 100%;">
+                  <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                  <h4><a href="">참가자 접수 안내</a></h4>
+                  <p style="text-align: left;">
+                    <i class="ri-check-double-line"></i> 접수 기간<br>
+                    07/10 (수) - 08/11 (일), 12:00 마감 <br><br>
+                    <i class="ri-check-double-line"></i> 참가 대상<br>
+                    대학생 및 성인 누구나 <br><br>
+                    <i class="ri-check-double-line"></i>선발 인원<br>
+                    예선 30개팀 내외<br><br>
+                    <i class="ri-check-double-line"></i>우대 사항<br>
+                    파이썬 및 딥레이서 유경험자<br><br>
+                    <i class="ri-check-double-line"></i>선발 기준<br>
+                    우대 사항 요건 및 참가 동기 심사<br><br>
+                    <hr>
+                    <a onclick="참가자접수()" href="javascript:void(0);"><b>참가자 접수 바로가기 ></b></a><br><br>
+                  </p>
+
+                </div>  
+              </div>
+
+              <div class="col-md-4 d-flex align-items-stretch mt-4">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="width: 100%;">
+                  <div class="icon"><i class="bx bx-file"></i></div>
+                  <h4><a href="">예선 안내</a></h4>
+                  <p style="text-align: left;">
+                    <i class="ri-check-double-line"></i> 예선 OT<br>
+                    08/17 (토), 13:00 <br><br>
+                    <i class="ri-check-double-line"></i> 예선 기간<br>
+                    09/02 (토) - 09/08 (금), 12:00 마감 <br><br>
+                    <i class="ri-check-double-line"></i> 지원<br>
+                    AWS 계정 및 40시간의 모델 훈련 시간<br><br>
+                    <hr>
+                    <a onclick="예선OT()" href="javascript:void(0);"><b>예선 OT (Zoom) 바로가기 ></b></a><br><br>
+                    <a onclick="예선규칙()" href="javascript:void(0);"><b>예선 규칙 바로가기 ></b></a><br><br>
+                  </p>
+                </div> 
+              </div> 
+
+              <div class="col-md-4 d-flex align-items-stretch mt-4">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="300" style="width: 100%;">
+                  <div class="icon"><i class="bx bx-tachometer"></i></div>
+                  <h4><a href="">본선 안내</a></h4>
+                  <p style="text-align: left;">
+                    <i class="ri-check-double-line"></i>본선 OT<br>
+                    09 / 21 (토), 13:00 <br><br>
+                    <i class="ri-check-double-line"></i> 지원<br>
+                    - AWS 계정 및 40시간의 모델 훈련 시간<br>
+                    - 숙박 (2박 3일) 및 식사<br>
+                    - 딥레이서 차량 대여<br><br>
+                    <i class="ri-check-double-line"></i> 본선 테스트 주행<br>
+                    09 / 27 (금) 28 (토), 12:00 - 18:00 <br><br> 
+                    <i class="ri-check-double-line"></i> 본선 장소 및 날짜<br>
+                    - 장소: 춘천 커먼즈필드 안녕하우스 <br>
+                    - 날짜: 09/17 (일), 10:00 - 17:00 <br><br>
+                    <hr>
+                    <a onclick="본선OT()" href="javascript:void(0);"><b>본선 OT (Zoom) 바로가기 ></b></a><br><br>
+                    <a onclick="본선규칙()" href="javascript:void(0);"><b>본선 규칙 바로가기 ></b></a><br><br>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="section-title" data-aos="fade-right">
+              <h2>Team</h2>
+              <p>본선에 진출한 6팀의 소개입니다.</p>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="row">
+
+              <div class="col-lg-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="assets/img/team/team-0.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>예선 후 업데이트</h4> 
+                    <span>1팀</span>
+                    <p>(1팀 소개글)</p> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="assets/img/team/team-0.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>예선 후 업데이트</h4> 
+                    <span>2팀</span>
+                    <p>(2팀 소개글)</p> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="assets/img/team/team-0.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>예선 후 업데이트</h4> 
+                    <span>3팀</span>
+                    <p>(3팀 소개글)</p> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="assets/img/team/team-0.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>예선 후 업데이트</h4> 
+                    <span>4팀</span>
+                    <p>(4팀 소개글)</p> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="assets/img/team/team-0.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>예선 후 업데이트</h4> 
+                    <span>5팀</span>
+                    <p>(5팀 소개글)</p> 
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="assets/img/team/team-0.jpg" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>예선 후 업데이트</h4> 
+                    <span>6팀</span>
+                    <p>(6팀 소개글)</p> 
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Team Section -->
+
+    <!-- ======= ranking Section ======= -->
+    <section id="ranking" class="cta">
+      <div class="container">
+
+        <div class="text-center" data-aos="zoom-in">
+          <h3> Ranking</h3> 
+          <div style="display:flex; justify-content:center;">
+            <div class="text-center" style="font-size:15px; margin:10px;">
+              <a class="cta-btn" target="_blank" href="./leaderboard_예선">예선 순위</a>
+            </div>
+            <div class="text-center" style="font-size:15px; margin:10px;">
+              <a class="cta-btn" target="_blank" href="./leaderboard_본선">본선 순위</a>
+            </div>
+          </div> 
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Cta Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3" data-aos="fade-right">
+            <div class="section-title">
+              <h2>Contact</h2>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="col-lg-9" data-aos="fade-up" data-aos-delay="100">
+            <iframe style="border:0; width: 100%; height: 270px;"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.8231001372537!2d127.73268931145934!3d37.86442940687357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3562e540d43059df%3A0x81f3c3f3c33ab340!2z7Luk66i87KaI7ZWE65OcIOy2mOyynA!5e0!3m2!1sko!2skr!4v1692011780159!5m2!1sko!2skr"
+              frameborder="0" allowfullscreen></iframe>
+            <div class="info mt-4">
+              <i class="bi bi-geo-alt"></i>
+              <h4>대회 (본선) 장소:</h4> 
+              <p>춘천 커먼즈필드 안녕하우스 (강원 춘천시 공지로 255)</p>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 mt-4">
+                <div class="info">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>edu@ai-castle.com</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="info w-100 mt-4">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>031-307-2929 / 033-245-6537</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- ======= gallery Section ======= -->
+    <section id="gallery" class="portfolio" style="margin-top:120px;"> 
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-left">
+          <h2>Gallery</h2>
+          <p>본선이 끝나면 더 많은 이미지들을 업로드할 예정입니다.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-poster">Poster</li>
+              <li data-filter=".filter-photos">Photo</li>
+              <li data-filter=".filter-awards">Awards</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200" style="background-color: white; " >
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-awards">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/awards-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/awards-1.jpg" data-gallery="portfolioGallery" 
+                    class="portfolio-lightbox" title=""><i class="bx bx-plus"></i> 크게 보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-photos">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo-1.jpg" data-gallery="portfolioGallery" 
+                    class="portfolio-lightbox" title=""><i class="bx bx-plus"></i> 크게 보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-photos">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo-2.jpg" data-gallery="portfolioGallery" 
+                    class="portfolio-lightbox" title=""><i class="bx bx-plus"></i> 크게 보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>
