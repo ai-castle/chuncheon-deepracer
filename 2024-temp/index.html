@@ -17,7 +17,7 @@
   <!-- Favicons -->
   <link href="favicon.png" rel="icon" type="image/png">
   <link href="apple-touch-icon.png" rel="apple-touch-icon">
- 
+
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -53,10 +53,10 @@
   </style>
 
   <!-- ======= 버전 컨트롤 (캐싱 무효화) ======= -->
-  <script src="assets/js/script.js?v=0.0.1"></script> 
+  <script src="assets/js/script.js?v=0.0.2"></script> 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var version = '?v=0.0.1'; 
+        var version = '?v=0.0.2'; 
         var elements = document.querySelectorAll('[data-version="control"]');
         elements.forEach(function(el) {
             if (el.tagName === 'IMG' && el.src) {
@@ -98,12 +98,13 @@
                 <li><a onclick="대회일정표()" href="javascript:void(0);">대회 일정표</a></li> 
                 <li><a onclick="참가자접수()" href="javascript:void(0);">참가자접수</a></li> 
                 <li class="dropdown"><a><span>예선 관련 자료</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
+                  <ul> 
                     <li><a onclick="예선오픈채팅()" href="javascript:void(0);">예선 오픈채팅</a></li> 
                     <li><a onclick="예선OT()" href="javascript:void(0);">예선 OT (Zoom)</a></li> 
                     <li><a onclick="예선OT자료()" href="javascript:void(0);">예선 OT 자료</a></li> 
                     <li><a onclick="예선규칙()" href="javascript:void(0);">예선 규칙</a></li> 
-                    <li><a onclick="예선랭킹()" href="javascript:void(0);">예선 랭킹</a></li> 
+                    <li><a onclick="예선1차랭킹()" href="javascript:void(0);">예선 (1차) 랭킹</a></li> 
+                    <li><a onclick="예선2차랭킹()" href="javascript:void(0);">예선 (2차) 랭킹</a></li> 
                   </ul>
                 </li>
                 <li class="dropdown"><a><span>본선 관련 자료</span> <i class="bi bi-chevron-right"></i></a>
@@ -142,8 +143,9 @@
       <h2 style="font-size:larger;">자율주행 AI 융합경진대회</h2>
       
       <!-- 참가자 접수 기간 -->
-      <a onclick="참가자접수()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🚀 참가자 접수 > </b></a> 
-      <h2 style="font-size:large;"><b>2024/8/11 (일), 12:00 까지</b></h2>
+      <a onclick="참가자접수()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🚀 참가자 접수</b></a> 
+      <h2 style="font-size:large;"><b>8/1 (목), 10:00 접수 시작 (선착순)</b></h2>
+      <a onclick="참가자접수사전준비사항안내()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;">참가자 접수 사전 준비사항 안내</a>
 
       <!-- 예선 기간 -->
       <!-- <a onclick="예선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 예선 실시간 랭킹 </b></a>  -->
@@ -285,23 +287,24 @@
               <li>
                 <i class="ri-check-double-line"></i> 참가 대상 <br/> &nbsp;
                 - 인공지능 / 자율주행에 관심있는 전국 대학생 및 성인<br/> &nbsp;
-                - 팀별 신청 (2~4명) <br/> &nbsp;
-                - 파이썬 및 딥레이서 유경험자 우대
+                - 팀별 신청 (2~3명)
               </li>
               <li>
-                <i class="ri-check-double-line"></i> 참가 신청 <br/> &nbsp;
-                - 접수 기간 : 2024년 7월 10일 (수) ~ 8월 11일(일), 12:00 까지<br/> &nbsp;
+                <i class="ri-check-double-line"></i> 참가 신청 (선착순)<br/> &nbsp;
+                - 접수 기간 : <b>2024년 8월 1일 (목), 10:00 </b>~ 8월 7일(수), 10:00 까지<br/> &nbsp;  
                 - 접수 방법 : 온라인 접수 (bit.ly/ai-chuncheon)<br/> &nbsp;
-                - 모집 규모 : 30개팀 내외
+                - 모집 규모 : 60개 팀 선착순<br/> &nbsp;
+                <span style="font-size:80%;">* 추최측의 사정에 따라 60개 팀 이상 추가 선발 가능</span> <br/>
               </li>
               <li>
                 <i class="ri-check-double-line"></i> 경기 방식 <br/> &nbsp;
-                - 예선 : 30개팀 / 온라인 대회<br/> &nbsp;
+                - 예선 1차 : 60개팀 / 온라인 대회<br/> &nbsp;
+                - 예선 2차 : 20개팀 / 온라인 대회<br/> &nbsp;
                 - 본선 : 6개팀 / 오프라인 대회 (춘천시 커먼즈필드)
               </li>
               <li>
                 <i class="ri-check-double-line"></i> 지원 <br/> &nbsp;
-                - DeepRacer 계정 사용료 : 예선 (40시간), 본선 (40시간) <br/> &nbsp;
+                - DeepRacer 계정 사용료 : 예선 1차 (10시간), 예선 2차 (30시간), 본선 (30시간) <br/> &nbsp;
                 - DeepRacer 교육 : 예선 및 본선 각 4시간 <br/> &nbsp;
                 - 딥레이서 차량 대여 (본선)
               </li>
@@ -346,14 +349,17 @@
       <div class="container">
 
         <div class="row counters">
-
-          <div class="col-lg-6 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"
+          <div class="col-lg-4 col-4 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="1"
               class="purecounter"></span>
-            <p>예선 참가팀 수</p>
+            <p>예선 1차 참가팀 수</p>
           </div>
-
-          <div class="col-lg-6 col-6 text-center">
+          <div class="col-lg-4 col-4 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>예선 2차 참가팀 수</p>
+          </div>
+          <div class="col-lg-4 col-4 text-center"> 
             <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
               class="purecounter"></span>
             <p>본선 참가팀 수</p>
@@ -392,7 +398,7 @@
                     <a href="javascript:void(0);" onclick="예선OT()" class="btn btn-success" style="margin:10px auto;">
                       예선 OT 참여 >
                     </a>
-                    <p><b>Zoom (8/17 토, 13:00 - 14:00)</b></p>
+                    <p><b>Zoom (8/10 토, 13:00 - 14:00)</b></p>
                     <a href="assets/img/예선OT시간표.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
                       title="예선 OT 시간표" data-version="control">
                       <img src="assets/img/예선OT시간표.jpg" class="img-fluid col-lg-10 col-md-10" alt="" data-version="control">
@@ -440,20 +446,20 @@
                   <h4><a href="">참가자 접수 안내</a></h4>
                   <p style="text-align: left;">
                     <i class="ri-check-double-line"></i> 접수 기간<br>
-                    07/10 (수) - 08/11 (일), 12:00 마감 <br><br>
+                    08/01 (목), 10:00 시작 - 08/07 (수), 10:00 마감 <br><br>
                     <i class="ri-check-double-line"></i> 참가 대상<br>
                     대학생 및 성인 누구나 <br><br>
                     <i class="ri-check-double-line"></i>선발 인원<br>
-                    예선 30개팀 내외<br><br>
-                    <i class="ri-check-double-line"></i>우대 사항<br>
-                    파이썬 및 딥레이서 유경험자<br><br>
+                    60개팀<br>
+                    (주최측의 사정에 따라 60개 팀 이상 선발 가능)<br><br> 
                     <i class="ri-check-double-line"></i>선발 기준<br>
-                    우대 사항 요건 및 참가 동기 심사<br><br>
+                    선착순<br><br>
                     <hr>
                     <a onclick="참가자접수()" href="javascript:void(0);"><b>참가자 접수 바로가기 ></b></a><br><br>
+                    <a onclick="참가자접수사전준비사항안내()" href="javascript:void(0);"><b>참가자 접수 사전 준비사항 안내 ></b></a><br><br>
                   </p>
 
-                </div>  
+                </div>   
               </div>
 
               <div class="col-md-4 d-flex align-items-stretch mt-4">
@@ -462,11 +468,15 @@
                   <h4><a href="">예선 안내</a></h4>
                   <p style="text-align: left;">
                     <i class="ri-check-double-line"></i> 예선 OT<br>
-                    08/17 (토), 13:00 <br><br>
-                    <i class="ri-check-double-line"></i> 예선 기간<br>
-                    09/02 (토) - 09/08 (금), 12:00 마감 <br><br>
-                    <i class="ri-check-double-line"></i> 지원<br>
-                    AWS 계정 및 40시간의 모델 훈련 시간<br><br>
+                    08/10 (토), 13:00 <br><br>
+                    <i class="ri-check-double-line"></i> 1차 예선<br>
+                    - 08/10 (토) - 08/16 (금), 12:00 마감 <br>
+                    - 대상 : 참가팀 전원 <br>
+                    - 지원 : AWS 계정 및 10시간의 모델 훈련 시간 <br><br>
+                    <i class="ri-check-double-line"></i> 2차 예선<br>
+                    - 08/17 (토) - 08/30 (금), 12:00 마감 <br>
+                    - 대상 : 1차 예선 상위 20개 팀 <br>
+                    - 지원 : AWS 계정 및 30시간의 모델 훈련 시간 <br><br> 
                     <hr>
                     <a onclick="예선OT()" href="javascript:void(0);"><b>예선 OT (Zoom) 바로가기 ></b></a><br><br>
                     <a onclick="예선규칙()" href="javascript:void(0);"><b>예선 규칙 바로가기 ></b></a><br><br>
@@ -602,10 +612,15 @@
           <h3> Ranking</h3> 
           <div style="display:flex; justify-content:center;">
             <div class="text-center" style="font-size:15px; margin:10px;">
-              <a class="cta-btn" target="_blank" href="./leaderboard_예선">예선 순위</a>
+
+              <a class="cta-btn" onclick="예선1차랭킹()" href="javascript:void(0);">예선 (1차) 순위</a>
             </div>
+            <div style="display:flex; justify-content:center;">
+              <div class="text-center" style="font-size:15px; margin:10px;">
+                <a class="cta-btn" onclick="예선2차랭킹()" href="javascript:void(0);">예선 (2차) 순위</a>
+              </div>
             <div class="text-center" style="font-size:15px; margin:10px;">
-              <a class="cta-btn" target="_blank" href="./leaderboard_본선">본선 순위</a>
+              <a class="cta-btn" onclick="본선랭킹()" href="javascript:void(0);">본선 순위</a>
             </div>
           </div> 
 

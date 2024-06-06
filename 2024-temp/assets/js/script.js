@@ -10,8 +10,12 @@ function 참가자접수() {
     window.open("https://forms.gle/tw6VGkGgnWobpw8s8", "_blank");
 } 
 
+function 참가자접수사전준비사항안내() {
+    window.open("https://docs.google.com/document/d/e/2PACX-1vSuc5jCrOHqciN53jJdrKx6gzSHKhY5mCBl2RZUomoj7UYKksj_UOXR15BxXDq-hkQOjeYxR6psSyIr/pub", "_blank");
+} 
+
 function 계정사용량() {
-    window.open("no-page.html", "_blank");
+    window.open("https://dr-league.ai-castle.com/usage/", "_blank");
 }
 
 //////////////// 예선 관련 자료 //////////
@@ -20,7 +24,7 @@ function 예선오픈채팅() {
 }
 
 function 예선OT() {
-        window.open("no-page.html", "_blank");
+        window.open("comming-soon.html", "_blank");
 }
 
 function 예선OT자료() {
@@ -41,8 +45,12 @@ function 예선규칙() {
     }
 }
 
-function 예선랭킹() {
-    window.open("no-page.html", "_blank");
+function 예선1차랭킹() {
+    window.open("https://dr-league.ai-castle.com/leaderboard/", "_blank");
+}
+
+function 예선2차랭킹() {
+    window.open("comming-soon.html", "_blank");
 }
 
 
@@ -53,7 +61,7 @@ function 본선오픈채팅() {
 
 
 function 본선OT() {
-        window.open("no-page.html", "_blank");
+        window.open("comming-soon.html", "_blank");
 }
 
 function 본선OT자료() {
@@ -76,7 +84,7 @@ function 본선규칙() {
 } 
 
 function 본선랭킹() {
-    window.open("no-page.html", "_blank");
+    window.open("comming-soon.html", "_blank");
 }
 
 function 본선테스트주행시간표() {
@@ -92,7 +100,7 @@ function 본선시간표() {
 }
 
 function 본선라이브스트리밍() {
-    window.open("no-page.html", "_blank");
+    window.open("comming-soon.html", "_blank");
 }
 
 
