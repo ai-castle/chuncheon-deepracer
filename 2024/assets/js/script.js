@@ -92,7 +92,8 @@ function 본선테스트주행시간표() {
 }
 
 function 본선숙소위치() {
-    window.open("https://naver.me/xUEItkPy", "_blank");
+    // window.open("https://naver.me/xUEItkPy", "_blank");
+    window.open("comming-soon.html", "_blank");
 }
 
 function 본선시간표() {
