@@ -15,7 +15,7 @@ function 참가자접수사전준비사항안내() {
 } 
 
 function 계정사용량() {
-    window.open("https://dr-league.ai-castle.com/usage/", "_blank");
+    window.open("https://dr-chuncheon2024.ai-castle.com/usage/", "_blank");
 }
 
 //////////////// 예선 관련 자료 //////////
@@ -46,7 +46,7 @@ function 예선규칙() {
 }
 
 function 예선1차랭킹() {
-    window.open("https://dr-league.ai-castle.com/leaderboard/", "_blank");
+    window.open("https://dr-chuncheon2024.ai-castle.com/leaderboard/", "_blank");
 }
 
 function 예선2차랭킹() {
