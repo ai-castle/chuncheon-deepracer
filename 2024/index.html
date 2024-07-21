@@ -97,27 +97,37 @@
               <ul>
                 <li><a onclick="대회일정표()" href="javascript:void(0);">대회 일정표</a></li> 
                 <li><a onclick="참가자접수()" href="javascript:void(0);">참가자접수</a></li> 
+                <li class="dropdown"><a><span>오리엔테이션</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul> 
+                    <li><a onclick="OT1차()" href="javascript:void(0);">OT 1차 (Zoom)</a></li> 
+                    <li><a onclick="OT1차자료()" href="javascript:void(0);">OT 1차 자료</a></li> 
+                    <li><a onclick="OT2차()" href="javascript:void(0);">OT 2차 (Zoom)</a></li> 
+                    <li><a onclick="OT2차자료()" href="javascript:void(0);">OT 2차 자료</a></li> 
+                  </ul>
+                </li>
                 <li class="dropdown"><a><span>예선 관련 자료</span> <i class="bi bi-chevron-right"></i></a>
                   <ul> 
                     <li><a onclick="예선오픈채팅()" href="javascript:void(0);">예선 오픈채팅</a></li> 
-                    <li><a onclick="예선OT()" href="javascript:void(0);">예선 OT (Zoom)</a></li> 
-                    <li><a onclick="예선OT자료()" href="javascript:void(0);">예선 OT 자료</a></li> 
                     <li><a onclick="예선규칙()" href="javascript:void(0);">예선 규칙</a></li> 
-                    <li><a onclick="예선1차랭킹()" href="javascript:void(0);">예선 (1차) 랭킹</a></li> 
-                    <li><a onclick="예선2차랭킹()" href="javascript:void(0);">예선 (2차) 랭킹</a></li> 
+                    <li><a onclick="예선랭킹()" href="javascript:void(0);">예선 랭킹</a></li> 
                   </ul>
                 </li>
                 <li class="dropdown"><a><span>본선 관련 자료</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
+                  <ul> 
                     <li><a onclick="본선오픈채팅()" href="javascript:void(0);">본선 오픈채팅</a></li> 
-                    <li><a onclick="본선OT()" href="javascript:void(0);">본선 OT (Zoom)</a></li> 
-                    <li><a onclick="본선OT자료()" href="javascript:void(0);">본선 OT 자료</a></li> 
                     <li><a onclick="본선규칙()" href="javascript:void(0);">본선 규칙</a></li> 
                     <li><a onclick="본선랭킹()" href="javascript:void(0);">본선 랭킹</a></li> 
-                    <li><a onclick="본선테스트주행시간표()" href="javascript:void(0);">본선 테스트 주행 시간표</a></li> 
-                    <li><a onclick="본선숙소위치()" href="javascript:void(0);">본선 숙소 위치</a></li> 
-                    <li><a onclick="본선시간표()" href="javascript:void(0);">본선 시간표</a></li> 
-                    <li><a onclick="본선라이브스트리밍()" href="javascript:void(0);">본선 라이브 스트리밍</a></li> 
+                  </ul>
+                </li>
+                <li class="dropdown"><a><span>결승전 관련 자료</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a onclick="결승오픈채팅()" href="javascript:void(0);">결승전 오픈채팅</a></li> 
+                    <li><a onclick="결승규칙()" href="javascript:void(0);">결승전 규칙</a></li> 
+                    <li><a onclick="결승랭킹()" href="javascript:void(0);">결승전 랭킹</a></li> 
+                    <li><a onclick="결승테스트주행시간표()" href="javascript:void(0);">결승전 테스트 주행 시간표</a></li> 
+                    <li><a onclick="결승숙소위치()" href="javascript:void(0);">결승전 숙소 위치</a></li> 
+                    <li><a onclick="결승시간표()" href="javascript:void(0);">결승전 시간표</a></li> 
+                    <li><a onclick="결승라이브스트리밍()" href="javascript:void(0);">결승전 라이브 스트리밍</a></li> 
                   </ul>
                 </li>
                 <li><a onclick="계정사용량()" href="javascript:void(0);">계정사용량 확인</a></li> 
@@ -150,18 +160,23 @@
       <!-- 예선 기간 -->
       <!-- <a onclick="예선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 예선 실시간 랭킹 </b></a>  -->
       <!-- <a onclick="계정사용량()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🕑 계정 실시간 사용량 </b></a>  -->
-      <!-- <h2 style="font-size:large;"><b>예선 기간 중 : 8월 17일 - 8월 31일</b></h2> -->
+      <!-- <h2 style="font-size:large;"><b>예선 기간 : 8월 10일 - 8월 16일</b></h2> -->
 
       <!-- 본선 기간 -->
-      <!-- <a onclick="본선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏆️ 본선 실시간 랭킹 </b></a>  -->
-      <!-- <a onclick="본선라이브스트리밍()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>📺 본선 라이브 스트리밍 </b></a><br>  -->
-      <!-- <a onclick="예선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 예선 최종 랭킹 </b></a>  -->
+      <!-- <a onclick="본선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 본선 실시간 랭킹 </b></a>  -->
       <!-- <a onclick="계정사용량()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🕑 계정 실시간 사용량 </b></a>  -->
-      <!-- <h2 style="font-size:large;"><b>본선 기간 중 : 9월 21일 - 9월 29일</b></h2> -->
+      <!-- <h2 style="font-size:large;"><b>본선 기간 : 8월 17일 - 8월 30일</b></h2> -->
+
+      <!-- 결승 기간 -->
+      <!-- <a onclick="결승랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏆️ 결승 실시간 랭킹 </b></a>  -->
+      <!-- <a onclick="결승라이브스트리밍()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>📺 결승 라이브 스트리밍 </b></a><br>  -->
+      <!-- <a onclick="계정사용량()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🕑 계정 실시간 사용량 </b></a>  -->
+      <!-- <h2 style="font-size:large;"><b>결승 기간 : 9월 21일 - 9월 29일</b></h2> -->
 
       <!-- 대회 종료 --> 
       <!-- <a onclick="예선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 예선 최종 랭킹 </b></a>  -->
-      <!-- <a onclick="본선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏆️ 본선 최종 랭킹 </b></a> -->
+      <!-- <a onclick="본선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 본선 최종 랭킹 </b></a>  -->
+      <!-- <a onclick="결승랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏆️ 결승 최종 랭킹 </b></a> -->
       <!-- <h2 style="font-size:large;"><b>대회가 모두 종료되었습니다.</b></h2> -->
 
     </div> 
@@ -298,15 +313,15 @@
               </li>
               <li>
                 <i class="ri-check-double-line"></i> <b>경기 방식</b> <br/> &nbsp;
-                - 예선 1차 : 60개팀 / 온라인 대회<br/> &nbsp;
-                - 예선 2차 : 20개팀 / 온라인 대회<br/> &nbsp;
-                - 본선 : 6개팀 / 오프라인 대회 (춘천시 커먼즈필드)
+                - 예선 : 60개팀 / 온라인 대회<br/> &nbsp;
+                - 본선 : 20개팀 / 온라인 대회<br/> &nbsp;
+                - 결승 : 6개팀 / 오프라인 대회 (춘천시 커먼즈필드)
               </li>
               <li>
                 <i class="ri-check-double-line"></i> <b>지원</b> <br/> &nbsp;
-                - DeepRacer 계정 사용료 : 예선 1차 (10시간), 예선 2차 (30시간), 본선 (30시간) <br/> &nbsp;
-                - DeepRacer 교육 : 예선 및 본선 각 4시간 <br/> &nbsp;
-                - 딥레이서 차량 대여 (본선)
+                - DeepRacer 계정 사용료 : 예선 (10시간), 본선 (30시간), 결승 (30시간) <br/> &nbsp;
+                - DeepRacer 교육 : 4시간 x 2회<br/> &nbsp;
+                - 딥레이서 차량 대여 (결승)
               </li>
               <li>
                 <i class="ri-check-double-line"></i> <b>시상 및 상품</b> <br/>
@@ -352,17 +367,17 @@
           <div class="col-lg-4 col-4 text-center">
             <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="1"
               class="purecounter"></span>
-            <p>예선 1차 참가팀 수</p>
+            <p>예선 참가팀 수</p>
           </div>
           <div class="col-lg-4 col-4 text-center">
             <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
               class="purecounter"></span>
-            <p>예선 2차 참가팀 수</p>
+            <p>본선 참가팀 수</p>
           </div>
           <div class="col-lg-4 col-4 text-center"> 
             <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
               class="purecounter"></span>
-            <p>본선 참가팀 수</p>
+            <p>결승 참가팀 수</p>
           </div>
 
 
@@ -382,7 +397,7 @@
             <div class="content">
               <h4 style="margin:20px auto;"><b>ORIENTATION</b></h4>
               <h5 style="margin:20px auto;"><b>OT (필참)</b></h5>
-              <p> 예선 및 본선 참가자들은 '오리엔테이션'(온라인, Zoom)에 필수로 참가해야 합니다. 대회 규칙, AWS 계정 배포 및 사용 방법등을 안내합니다.</p>
+              <p> 참가자들은 '오리엔테이션'(온라인, Zoom)에 필수로 참가해야 합니다. 대회 규칙, AWS 계정 배포 및 사용 방법등을 안내합니다.</p>
 
               <h5 style="margin:20px auto;"><b>특강 (선택)</b></h5>
               <p>오리엔테이션이 끝나고 진행되는 '딥레이서 특강' 참석은 선택 사항입니다. 딥레이서를 처음 접하는 참가자들을 위한 교육입니다.</p>
@@ -394,28 +409,28 @@
                 <div class="col-xl-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4>예선 OT - 온라인</h4> 
-                    <a href="javascript:void(0);" onclick="예선OT()" class="btn btn-dark" style="margin:10px auto;">
-                      예선 OT 참여 >
+                    <h4>1차 오리엔테이션<br>(예선, 본선)</h4> 
+                    <a href="javascript:void(0);" onclick="OT1차()" class="btn btn-dark" style="margin:10px auto;">
+                      1차 OT 참여 >
                     </a>
                     <p><b>Zoom (8/10 토, 13:00 - 14:00)</b></p>
-                    <a href="assets/img/예선OT시간표.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="예선 OT 시간표" data-version="control">
-                      <img src="assets/img/예선OT시간표.jpg" class="img-fluid col-lg-10 col-md-10" alt="" data-version="control">
+                    <a href="assets/img/OT1차시간표.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                      title="1차 OT 시간표" data-version="control">
+                      <img src="assets/img/OT1차시간표.jpg" class="img-fluid col-lg-10 col-md-10" alt="" data-version="control">
                     </a>
                   </div>
                 </div>
                 <div class="col-xl-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
                   <div class="icon-box mt-4 mt-xl-0"> 
                     <i class="bx bx-cube-alt"></i>
-                    <h4>본선 OT - 온라인 </h4>
-                    <a href="javascript:void(0);" onclick="본선OT()" class="btn btn-dark" style="margin:10px auto;">
-                      본선 OT 참여 >
+                    <h4>2차 오리엔테이션<br>(결승전) </h4>
+                    <a href="javascript:void(0);" onclick="OT2차()" class="btn btn-dark" style="margin:10px auto;">
+                      2차 OT 참여 >
                     </a>
                     <p><b>Zoom (9/21 토, 13:00 - 14:00)</b></p>
-                    <a href="assets/img/본선OT시간표.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="본선 OT 시간표" data-version="control">
-                      <img src="assets/img/본선OT시간표.jpg" class="img-fluid col-lg-10 col-md-10" alt="" data-version="control">
+                    <a href="assets/img/OT2차시간표.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                      title="2차 OT 시간표" data-version="control">
+                      <img src="assets/img/OT2차시간표.jpg" class="img-fluid col-lg-10 col-md-10" alt="" data-version="control">
                     </a>
                   </div>
                 </div>
@@ -441,45 +456,27 @@
           <div class="col-lg-12"> 
             <div class="row">
               <div class="col-md-4 d-flex align-items-stretch mt-4">
-                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="width: 100%;">
-                  <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                  <h4><a href="">참가자 접수 안내</a></h4>
-                  <p style="text-align: left;">
-                    <i class="ri-check-double-line"></i> <b>접수 기간</b><br> 
-                    08/01 (목), 10:00 시작 - 08/07 (수), 10:00 마감 <br><br>
-                    <i class="ri-check-double-line"></i> <b>참가 대상</b><br>
-                    대학생 및 성인 누구나 <br><br>
-                    <i class="ri-check-double-line"></i><b>선발 인원</b><br>
-                    60개팀<br>
-                    (주최측의 사정에 따라 60개 팀 이상 선발 가능)<br><br> 
-                    <i class="ri-check-double-line"></i><b>선발 기준</b><br>
-                    선착순<br><br>
-                    <hr>
-                    <a onclick="참가자접수()" href="javascript:void(0);"><b>참가자 접수 바로가기 ></b></a><br><br>
-                    <a onclick="참가자접수사전준비사항안내()" href="javascript:void(0);"><b>참가자 접수 사전 준비사항 안내 ></b></a><br><br>
-                  </p>
-
-                </div>   
-              </div>
-
-              <div class="col-md-4 d-flex align-items-stretch mt-4">
                 <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="width: 100%;">
                   <div class="icon"><i class="bx bx-file"></i></div>
                   <h4><a href="">예선 안내</a></h4>
                   <p style="text-align: left;">
-                    <i class="ri-check-double-line"></i> <b>예선 OT</b><br>
-                    08/10 (토), 13:00 <br><br>
-                    <i class="ri-check-double-line"></i> <b>1차 예선</b><br>
-                    - 08/10 (토) - 08/16 (금), 12:00 마감 <br>
-                    - 대상 : 참가팀 전원 <br>
-                    - 지원 : AWS 계정 및 10시간의 모델 훈련 시간 <br><br>
-                    <i class="ri-check-double-line"></i> <b>2차 예선</b><br>
-                    - 08/17 (토) - 08/30 (금), 12:00 마감 <br>
-                    - 대상 : 1차 예선 상위 20개 팀 <br>
-                    - 지원 : AWS 계정 및 30시간의 모델 훈련 시간 <br><br> 
-                    <hr>
-                    <a onclick="예선OT()" href="javascript:void(0);"><b>예선 OT (Zoom) 바로가기 ></b></a><br><br>
-                    <a onclick="예선규칙()" href="javascript:void(0);"><b>예선 규칙 바로가기 ></b></a><br><br>
+                    <i class="ri-check-double-line"></i> <b>일정</b><br> 8/10 (토) - 8/16 (금), 12:00 마감<br><br>
+                    <i class="ri-check-double-line"></i> <b>대상</b><br> 참가팀 전원 (60팀)<br><br>
+                    <i class="ri-check-double-line"></i> <b>형태</b><br> 시뮬레이션 (온라인)<br><br>
+                    <i class="ri-check-double-line"></i> <b>지원</b><br> DeepRacer 10시간의 모델 훈련 시간<br><br>
+                  </p>
+                </div> 
+              </div> 
+
+              <div class="col-md-4 d-flex align-items-stretch mt-4">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="width: 100%;">
+                  <div class="icon"><i class="bx bx-file"></i></div>
+                  <h4><a href="">본선 안내</a></h4>
+                  <p style="text-align: left;">
+                    <i class="ri-check-double-line"></i> <b>일정</b><br> 08/17 (토) - 08/30 (금), 12:00 마감<br><br>
+                    <i class="ri-check-double-line"></i> <b>대상</b><br> 예선 상위 20팀<br><br>
+                    <i class="ri-check-double-line"></i> <b>형태</b><br> 시뮬레이션 (온라인)<br><br>
+                    <i class="ri-check-double-line"></i> <b>지원</b><br> DeepRacer 30시간의 모델 훈련 시간<br><br>
                   </p>
                 </div> 
               </div> 
@@ -489,19 +486,14 @@
                   <div class="icon"><i class="bx bx-tachometer"></i></div>
                   <h4><a href="">본선 안내</a></h4>
                   <p style="text-align: left;">
-                    <i class="ri-check-double-line"></i><b>본선 OT</b><br>
-                    09 / 21 (토), 13:00 <br><br>
-                    <i class="ri-check-double-line"></i> <b>지원</b><br>
-                    - AWS 계정 및 30시간의 모델 훈련 시간<br>
-                    - 딥레이서 차량 대여, 숙박 및 식사<br><br> 
-                    <i class="ri-check-double-line"></i> <b>본선 테스트 주행</b><br>
-                    09 / 27 (금) 28 (토), 12:00 - 18:00 <br><br> 
-                    <i class="ri-check-double-line"></i> <b>본선 장소 및 날짜</b><br>
-                    - 장소: 춘천 커먼즈필드 안녕하우스 <br>
-                    - 날짜: 09/29 (일), 10:00 - 16:00 <br>
-                    <hr>
-                    <a onclick="본선OT()" href="javascript:void(0);"><b>본선 OT (Zoom) 바로가기 ></b></a><br><br>
-                    <a onclick="본선규칙()" href="javascript:void(0);"><b>본선 규칙 바로가기 ></b></a><br><br>
+                    <i class="ri-check-double-line"></i> <b>일정</b><br> 
+                      - 테스트주행 : 09월 27(금) - 28 (토), 12:00 - 18:00 <br>
+                      - 결승전대회 : 09/29 (일), 10:00 - 16:00 (춘천 커먼즈필드) <br><br> 
+                    <i class="ri-check-double-line"></i> <b>대상</b><br> 본선 상위 6팀<br><br>
+                    <i class="ri-check-double-line"></i> <b>형태</b><br> 오프라인<br><br>
+                    <i class="ri-check-double-line"></i> <b>지원</b><br> 
+                      - DeepRacer 30시간의 모델 훈련 시간<br>
+                      - 딥레이서 차량 대여, 숙박 및 식사<br><br> 
                   </p>
                 </div>
               </div>
@@ -523,7 +515,7 @@
           <div class="col-lg-3">
             <div class="section-title" data-aos="fade-right">
               <h2>Team</h2>
-              <p>본선에 진출한 6팀의 소개입니다.</p>
+              <p>결승전에 진출한 6팀의 소개입니다.</p>
             </div>
           </div> 
           <div class="col-lg-9">
@@ -533,9 +525,9 @@
                 <div class="member" data-aos="zoom-in" data-aos-delay="100">
                   <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
-                    <h4>예선 후 업데이트</h4> 
-                    <span>본선 1팀</span>
-                    <p>(본선 1팀 소개글)</p> 
+                    <h4>추후 업데이트</h4> 
+                    <span>결승전 1팀</span>
+                    <p>(결승전 1팀 소개글)</p> 
                   </div>
                 </div>
               </div>
@@ -544,9 +536,9 @@
                 <div class="member" data-aos="zoom-in" data-aos-delay="100">
                   <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
-                    <h4>예선 후 업데이트</h4> 
-                    <span>본선 2팀</span>
-                    <p>(본선 2팀 소개글)</p> 
+                    <h4>추후 업데이트</h4> 
+                    <span>결승전 2팀</span>
+                    <p>(결승전 2팀 소개글)</p> 
                   </div>
                 </div>
               </div>
@@ -555,9 +547,9 @@
                 <div class="member" data-aos="zoom-in" data-aos-delay="100">
                   <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
-                    <h4>예선 후 업데이트</h4> 
-                    <span>본선 3팀</span>
-                    <p>(본선 3팀 소개글)</p> 
+                    <h4>추후 업데이트</h4> 
+                    <span>결승전 3팀</span>
+                    <p>(결승전 3팀 소개글)</p> 
                   </div>
                 </div>
               </div>
@@ -566,9 +558,9 @@
                 <div class="member" data-aos="zoom-in" data-aos-delay="100">
                   <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
-                    <h4>예선 후 업데이트</h4> 
-                    <span>본선 4팀</span>
-                    <p>(본선 4팀 소개글)</p> 
+                    <h4>추후 업데이트</h4> 
+                    <span>결승전 4팀</span>
+                    <p>(결승전 4팀 소개글)</p> 
                   </div>
                 </div>
               </div>
@@ -577,9 +569,9 @@
                 <div class="member" data-aos="zoom-in" data-aos-delay="100">
                   <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
-                    <h4>예선 후 업데이트</h4> 
-                    <span>본선 5팀</span>
-                    <p>(본선 5팀 소개글)</p> 
+                    <h4>추후 업데이트</h4> 
+                    <span>결승전 5팀</span>
+                    <p>(결승전 5팀 소개글)</p> 
                   </div>
                 </div>
               </div>
@@ -588,9 +580,9 @@
                 <div class="member" data-aos="zoom-in" data-aos-delay="100">
                   <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
                   <div class="member-info">
-                    <h4>예선 후 업데이트</h4> 
-                    <span>본선 6팀</span>
-                    <p>(본선 6팀 소개글)</p> 
+                    <h4>추후 업데이트</h4> 
+                    <span>결승전 6팀</span>
+                    <p>(결승전 6팀 소개글)</p> 
                   </div>
                 </div>
               </div>
@@ -612,14 +604,14 @@
           <div style="display:flex; justify-content:center;">
             <div class="text-center" style="font-size:15px; margin:10px;">
 
-              <a class="cta-btn" onclick="예선1차랭킹()" href="javascript:void(0);">1차 예선 순위</a>
+              <a class="cta-btn" onclick="예선랭킹()" href="javascript:void(0);">예선 순위</a>
             </div>
             <div style="display:flex; justify-content:center;">
               <div class="text-center" style="font-size:15px; margin:10px;">
-                <a class="cta-btn" onclick="예선2차랭킹()" href="javascript:void(0);">2차 예선 순위</a>
+                <a class="cta-btn" onclick="본선랭킹()" href="javascript:void(0);">본선 순위</a>
               </div>
             <div class="text-center" style="font-size:15px; margin:10px;">
-              <a class="cta-btn" onclick="본선랭킹()" href="javascript:void(0);">본선 순위</a>
+              <a class="cta-btn" onclick="결승랭킹()" href="javascript:void(0);">결승 순위</a>
             </div>
           </div> 
 
