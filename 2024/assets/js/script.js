@@ -21,7 +21,7 @@ function 계정사용량() {
 
 //////////////// 오리엔테이션 자료 //////////
 function OT1차() {
-    window.open("comming-soon.html", "_blank");
+    window.open("https://us05web.zoom.us/j/82862327465", "_blank");
 }
 
 function OT1차자료() {
@@ -33,7 +33,7 @@ if (password === 예선Password) {
 }
 } 
 
-function OT1차() {
+function OT2차() {
     window.open("comming-soon.html", "_blank");
 }
 
@@ -69,7 +69,7 @@ function 예선랭킹() {
 
 //////////////// 본선 관련 자료 //////////
 function 본선오픈채팅() {
-    window.open("https://open.kakao.com/o/g31Mylqg", "_blank");
+    window.open("https://open.kakao.com/o/guJ1zlqg", "_blank");
 }
 
 
@@ -83,7 +83,7 @@ function 본선규칙() {
 }
 
 function 본선랭킹() {
-    window.open("https://dr-chuncheon2024.ai-castle.com/leaderboard/", "_blank");
+    window.open("comming-soon.html", "_blank");
 }
 
 ////////////// 결승 관련 링크 //////////////
