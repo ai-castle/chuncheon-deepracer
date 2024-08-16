@@ -63,7 +63,7 @@ function 예선규칙() {
 }
 
 function 예선랭킹() {
-    window.open("https://dr-chuncheon2024.ai-castle.com/leaderboard/", "_blank");
+    window.open("leaderboard/예선순위.html", "_blank");
 }
 
 
@@ -83,7 +83,7 @@ function 본선규칙() {
 }
 
 function 본선랭킹() {
-    window.open("comming-soon.html", "_blank");
+    window.open("https://dr-chuncheon2024.ai-castle.com/leaderboard/", "_blank");
 }
 
 ////////////// 결승 관련 링크 //////////////
