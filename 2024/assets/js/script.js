@@ -34,7 +34,7 @@ if (password === 예선Password) {
 } 
 
 function OT2차() {
-    window.open("comming-soon.html", "_blank");
+    window.open("https://us06web.zoom.us/j/83334818850", "_blank");
 }
 
 function OT2차자료() {
@@ -83,7 +83,7 @@ function 본선규칙() {
 }
 
 function 본선랭킹() {
-    window.open("https://dr-chuncheon2024.ai-castle.com/leaderboard/", "_blank");
+    window.open("leaderboard/본선순위.html", "_blank");
 }
 
 ////////////// 결승 관련 링크 //////////////
@@ -119,7 +119,7 @@ function 결승시간표() {
 }
 
 function 결승라이브스트리밍() {
-    window.open("comming-soon.html", "_blank");
+    window.open("https://bit.ly/24chuncheon", "_blank");
 }
 
 
