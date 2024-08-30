@@ -53,10 +53,10 @@
   </style>
 
   <!-- ======= 버전 컨트롤 (캐싱 무효화) ======= -->
-  <script src="assets/js/script.js?v=0.0.5"></script> 
+  <script src="assets/js/script.js?v=0.0.6"></script> 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var version = '?v=0.0.5'; 
+        var version = '?v=0.0.6'; 
         var elements = document.querySelectorAll('[data-version="control"]');
         elements.forEach(function(el) {
             if (el.tagName === 'IMG' && el.src) {
@@ -164,15 +164,17 @@
       <!-- <h2 style="font-size:large;"><b>예선 기간 : 8월 10일 - 8월 16일</b></h2> -->
 
       <!-- 본선 기간 -->
-      <a onclick="본선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 본선 실시간 랭킹 </b></a> 
-      <a onclick="계정사용량()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🕑 계정 실시간 사용량 </b></a> 
-      <h2 style="font-size:large;"><b>본선 기간 : 8월 17일 - 8월 30일</b></h2>
+      <!-- <a onclick="본선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 본선 실시간 랭킹 </b></a>  -->
+      <!-- <a onclick="계정사용량()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🕑 계정 실시간 사용량 </b></a>  -->
+      <!-- <h2 style="font-size:large;"><b>본선 기간 : 8월 17일 - 8월 30일</b></h2> -->
 
       <!-- 결승 기간 -->
+      <a onclick="예선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>예선 최종 랭킹 </b></a> 
+      <a onclick="본선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>본선 최종 랭킹 </b></a> 
       <!-- <a onclick="결승랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏆️ 결승 실시간 랭킹 </b></a>  -->
       <!-- <a onclick="결승라이브스트리밍()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>📺 결승 라이브 스트리밍 </b></a><br>  -->
       <!-- <a onclick="계정사용량()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🕑 계정 실시간 사용량 </b></a>  -->
-      <!-- <h2 style="font-size:large;"><b>결승 기간 : 9월 21일 - 9월 29일</b></h2> -->
+      <h2 style="font-size:large;"><b>결승 기간 : 9월 21일 - 9월 29일</b></h2>
 
       <!-- 대회 종료 --> 
       <!-- <a onclick="예선랭킹()" href="javascript:void(0);" class="btn-get-started" style="font-size:large;"><b>🏁 예선 최종 랭킹 </b></a>  -->

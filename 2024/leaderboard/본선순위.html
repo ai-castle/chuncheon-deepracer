@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DeepRacer Leaderboard">
+    <title>2024 ChunCheon - 본선</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img {
+            max-height: 150px; /* 이미지 세로 높이 제한 */
+            margin-bottom: 20px; /* 이미지와 제목 사이의 간격 */
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .table-container {
+            width: 100%;
+            max-width: 1200px; /* 테이블 최대 너비 제한 */
+            overflow-x: auto; /* 테이블이 화면을 넘어갈 경우 스크롤 생성 */
+            position: relative; /* 위치 조정을 위해 상대 위치 설정 */
+        }
+        .last-updated {
+            text-align: center; /* 오른쪽 구석으로 정렬 */
+            font-size: 0.8em; /* 글씨 크기 작게 */
+            color: #ccc; /* 글씨 색상 조정 */
+            margin: 10px 0; /* 테이블과의 간격 조정 */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 20px; /* 셀 패딩 조정 */
+            border: 1px solid #444;
+            text-align: center;
+            font-size: 1.2em; /* 글씨 크기 키움 */
+        }
+        th {
+            background-color: #333;
+            color: white;
+            font-size: 1.2em; /* 글씨 크기 키움 */
+        }
+        a {
+            color: dodgerblue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* 열 너비 조정 */
+        th:nth-child(1), td:nth-child(1) {
+            width: 10%; /* Rank 열 너비 조정 */
+        }
+        th:nth-child(2), td:nth-child(2) {
+            width: 30%; /* TeamName 열 너비 조정 */
+        }
+        th:nth-child(3), td:nth-child(3) {
+            width: 20%; /* LapTime 열 너비 조정 */
+        }
+        th:nth-child(4), td:nth-child(4) {
+            width: 10%; /* OffTrackCount 열 너비 조정 */
+        }
+        th:nth-child(5), td:nth-child(5) {
+            width: 10%; /* SubmissionCount 열 너비 조정 */
+        }
+        th:nth-child(6), td:nth-child(6) {
+            width: 10%; /* Video 열 너비 조정 */
+        }
+    </style>
+    <script type="text/javascript">
+        function openVideo(videoURL) {
+            var myWindow = window.open("", "VideoPopup", "width=800,height=600,location=no,toolbar=no");
+            myWindow.document.write('<!DOCTYPE html><html><body>');
+            myWindow.document.write('<video controls autoplay style="width:100%;height:100%;">');
+            myWindow.document.write('<source src="' + videoURL + '" type="video/mp4">');
+            myWindow.document.write('Your browser does not support the video tag.');
+            myWindow.document.write('</video>');
+            myWindow.document.write('</body></html>');
+        }
+
+        window.onload = function() {
+            var table = document.querySelector('table');
+            var rows = table.querySelectorAll('tbody tr');
+            rows.forEach(function(row) {
+                var rankCell = row.querySelector('td');
+                var rank = rankCell ? rankCell.innerText : "";
+                switch(rank) {
+                    case "1":
+                        row.style.backgroundColor = "#FFD700"; // Gold
+                        row.style.color = "black";
+                        row.style.fontWeight = "bold";
+                        break;
+                    case "2":
+                        row.style.backgroundColor = "#C0C0C0"; // Silver
+                        row.style.color = "black";
+                        row.style.fontWeight = "bold";
+                        break;
+                    case "3":
+                        row.style.backgroundColor = "#CD7F32"; // Bronze
+                        row.style.color = "black";
+                        row.style.fontWeight = "bold";
+                        break;
+                    case "-":
+                        row.style.backgroundColor = "#000"; // Default background
+                        row.style.color = "white";
+                        break;
+                    default:
+                        var rankNumber = parseInt(rank, 10);
+                        if (!isNaN(rankNumber)) {
+                            if (rankNumber >= 4 && rankNumber <= 6) { // 상위권
+                                row.style.backgroundColor = "#282828"; 
+                                row.style.color = "white";
+                            } else { // 모델을 제출했지만, 상위권에 들지 못함
+                                row.style.backgroundColor = "#1C1C1C"; 
+                                row.style.color = "white";
+                            }
+                        }
+                        break;
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>2024 ChunCheon - 본선</h1>
+    <div class="table-container">
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Rank</th>
+      <th>TeamName</th>
+      <th>LapTime</th>
+      <th>OffTrack</th>
+      <th>Submission</th>
+      <th>Video</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Tokyo_Drift</td>
+      <td>00:15.592</td>
+      <td>0</td>
+      <td>50</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(1).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>계르쉐</td>
+      <td>00:15.930</td>
+      <td>0</td>
+      <td>18</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(2).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>타슈</td>
+      <td>00:15.994</td>
+      <td>0</td>
+      <td>44</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(3).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>샤크홈즈</td>
+      <td>00:16.326</td>
+      <td>0</td>
+      <td>41</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(4).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>디비디비딥</td>
+      <td>00:16.796</td>
+      <td>0</td>
+      <td>50</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(5).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>유미와 나연이들</td>
+      <td>00:16.925</td>
+      <td>0</td>
+      <td>50</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(6).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>죠스바</td>
+      <td>00:16.927</td>
+      <td>0</td>
+      <td>50</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(7).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>GoStraight</td>
+      <td>00:17.325</td>
+      <td>0</td>
+      <td>46</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(8).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>의지영</td>
+      <td>00:17.856</td>
+      <td>0</td>
+      <td>47</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(9).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>홍홍카</td>
+      <td>00:17.925</td>
+      <td>0</td>
+      <td>34</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(10).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>곽챔스</td>
+      <td>00:18.131</td>
+      <td>0</td>
+      <td>33</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(11).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>파워레이서</td>
+      <td>00:18.194</td>
+      <td>0</td>
+      <td>49</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(12).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>카레있어</td>
+      <td>00:18.531</td>
+      <td>0</td>
+      <td>42</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(13).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>다 때려박아 범퍼카</td>
+      <td>00:19.261</td>
+      <td>0</td>
+      <td>7</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(14).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>제네모닝?</td>
+      <td>00:19.394</td>
+      <td>0</td>
+      <td>20</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(15).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>D.A.M</td>
+      <td>00:21.325</td>
+      <td>1</td>
+      <td>27</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(16).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Vroom</td>
+      <td>00:21.459</td>
+      <td>0</td>
+      <td>31</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(17).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>강자</td>
+      <td>00:22.584</td>
+      <td>1</td>
+      <td>10</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(18).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>아이코딩</td>
+      <td>00:24.129</td>
+      <td>0</td>
+      <td>23</td>
+      <td><a onclick="openVideo('https://pub-f629167621be47f8b772de6b0fbbe30b.r2.dev/chucheon-deepracer/2024/%EB%B3%B8%EC%84%A0_video/0-video%20(19).mp4')" href="#" style="cursor: pointer;text-decoration: underline;color:dodgerblue;" >view</a></td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>루이앤춘식</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</body>
+</html>
