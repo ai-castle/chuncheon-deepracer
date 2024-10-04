@@ -102,7 +102,7 @@ function 결승규칙() {
 } 
 
 function 결승랭킹() {
-    window.open("comming-soon.html", "_blank");
+    window.open("leaderboard/결승순위.html", "_blank");
 }
 
 function 결승테스트주행시간표() {
